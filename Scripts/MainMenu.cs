@@ -12,7 +12,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private Button _authors;
     [SerializeField] private Button _exit;
 
-    void Start()
+    private void Start()
     {
         _start.onClick.AddListener(StartGame);
         _authors.onClick.AddListener(Authors);
