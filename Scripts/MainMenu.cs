@@ -22,15 +22,18 @@ public class MainMenu : MonoBehaviour
     private void StartGame()
     {
         _startGame.SetActive(true);
+        _start.onClick.RemoveListener(StartGame);
     }
 
     private void ViewAuthors()
     {
         _aboutAuthors.SetActive(true);
+        _authors.onClick.RemoveListener(ViewAuthors);
     }
 
     private void Exit()
     {
         _exitGame.SetActive(true);
+        _exit.onClick.RemoveListener(Exit);
     }
 }
