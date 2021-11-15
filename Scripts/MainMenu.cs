@@ -15,7 +15,7 @@ public class MainMenu : MonoBehaviour
     private void Start()
     {
         _start.onClick.AddListener(StartGame);
-        _authors.onClick.AddListener(Authors);
+        _authors.onClick.AddListener(ViewAuthors);
         _exit.onClick.AddListener(Exit);
     }
 
@@ -24,7 +24,7 @@ public class MainMenu : MonoBehaviour
         _startGame.SetActive(true);
     }
 
-    private void Authors()
+    private void ViewAuthors()
     {
         _aboutAuthors.SetActive(true);
     }
