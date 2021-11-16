@@ -17,23 +17,24 @@ public class MainMenu : MonoBehaviour
         _start.onClick.AddListener(StartGame);
         _authors.onClick.AddListener(ViewAuthors);
         _exit.onClick.AddListener(Exit);
+
+        _exit.onClick.RemoveListener(Exit);
+        _authors.onClick.RemoveListener(ViewAuthors);
+        _start.onClick.RemoveListener(StartGame);
     }
 
     private void StartGame()
     {
         _startGame.SetActive(true);
-        _start.onClick.RemoveListener(StartGame);
     }
 
     private void ViewAuthors()
     {
         _aboutAuthors.SetActive(true);
-        _authors.onClick.RemoveListener(ViewAuthors);
     }
 
     private void Exit()
     {
         _exitGame.SetActive(true);
-        _exit.onClick.RemoveListener(Exit);
     }
 }
